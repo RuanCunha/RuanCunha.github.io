@@ -14,4 +14,5 @@
 - [ ] Nav bar
 - [ ] Fully responsive
 - [ ] Email form
+- [ ] Contact icons
 - [ ] Projects carrousel
