@@ -105,6 +105,12 @@ header {
   color: var(--color-cinder);
 }
 
+.hero-icons {
+  color: var(--color-pinkish-red);
+  font-size: 2rem;
+  margin: 10px;
+}
+
 /* Projects
 *************************/
 
