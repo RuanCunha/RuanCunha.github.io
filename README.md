@@ -16,3 +16,5 @@
 - [ ] Email form
 - [ ] Contact icons
 - [ ] Projects carrousel
+- [ ] Night mode
+- [ ] English page and toggle
