@@ -52,6 +52,10 @@ h3 {
   padding-bottom: 2rem;
 }
 
+h4 {
+  margin: 0;
+}
+
 h1, h2, h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   margin: 0;
@@ -74,11 +78,16 @@ h1, h2, h3 {
 
 .divider > section {
   border-bottom: 1px dashed var(--color-cinder);
-  padding: 26px 0;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 .divider > section:last-of-type {
   border-bottom: none;
+}
+
+.divider > section > p:last-of-type {
+  padding-bottom: 1rem;
 }
 
 /* Nav Bar
@@ -191,7 +200,8 @@ p {
 }
 
 .projects a {
-  color: var(--red-crayola)
+  color: var(--color-pinkish-red);
+  font-weight: bold;
 }
 
 .projects .btn {
@@ -307,7 +317,8 @@ footer {
   .job-item {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
+    column-gap: 1.25rem;
+    padding-top: 0;
   }
 
   .contact-list {
