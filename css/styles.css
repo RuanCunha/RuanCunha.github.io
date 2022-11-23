@@ -26,7 +26,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
@@ -34,24 +34,25 @@ span {
   color: var(--color-pinkish-red);
 }
 
-a {
-  color: var(--sea-green-crayola);
-}
-
 a:hover {
   text-decoration: none;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 3rem;
   line-height: 1;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 1.5rem;
 }
 
-h1, h2 {
+h3 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+h1, h2, h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   margin: 0;
 }
@@ -60,18 +61,14 @@ h1, h2 {
   max-width: 800px;
   width: 85%;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 4.5rem 0;
 }
 
-h3 {
-  margin-bottom: 0;
-}
-
-.item-details h3 + p {
+.item-details h4 + p {
   font-style: italic;
 }
 
-.item-details h3 ~ p {
+.item-details h4 ~ p {
   margin: 0;
 }
 
@@ -87,35 +84,103 @@ h3 {
 /* Nav Bar
 *************************/
 
+header {
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0.3rem 1rem;
+}
+
+nav {
+  background-color: var(--color-cinder-light);
+  opacity: 0.9;
+  padding: 1rem;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+}
+
+nav:target {
+  transform: translateX(0);
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60vh;
 }
 
-nav li {
-  padding: 0.5rem 1rem;
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 1rem 0 0 1rem;
+  font-size: 2rem;
+  text-align: left;
+  color: var(--color-pinkish-red);
+  border-bottom: 1px solid var(--color-pinkish-red);
+}
+
+/* nav a:focus {
+  background-color: var(--color-pale-red);
+  color: #FFFFFF;
+}
+
+nav a:hover {
+  background-color: var(--color-pale-red);
+  color: #000000;
+} */
+
+.hamburger, .close {
+  font-size: 2rem;
+  color: var(--color-pinkish-red);
+}
+
+.close {
+  padding-top: 0;
+}
+
+.close:hover {
+  background-color: transparent;
 }
 
 /* Profile
 *************************/
 
-header {
-  background-color: var(--color-cinder-light);
-  color: var(--color-cinder);
-}
-
 .my-name {
   font-size: 1rem;
-  margin-left: 0.2rem;
   letter-spacing: 0.4rem;
   color: var(--color-cinder);
+  margin: 0;
+  margin-left: 0.2rem;
 }
 
 .hero-icons {
   color: var(--color-pinkish-red);
   font-size: 2rem;
   margin: 10px;
+}
+
+p {
+  font-size: 1rem;
+  width: 100%;
+  text-justify: distribute;
 }
 
 /* Projects
@@ -148,7 +213,7 @@ header {
   overflow: hidden;
 }
 
-.project-item h3 {
+.project-item h4 {
   margin-top: 0;
 }
 
@@ -185,7 +250,7 @@ footer {
 }
 
 .contact-list a {
-  padding: 15px;
+  padding: 5px;
   display: inline-block;
 }
 
@@ -193,6 +258,46 @@ footer {
 *************************/
 
 @media screen and (min-width: 750px) {
+  header{
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  nav {
+    background-color: #FFFFFF;
+    opacity: 1;
+    padding: 0;
+    position: static;
+    height: auto;
+    transform: translateX(0);
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--color-cinder);
+    border-bottom: none;
+    margin: 0.5rem;
+  }
+
+  .hamburger, .close {
+    display: none;
+  }
+
   .project-item img {
     float: left;
     margin-right: 20px;
@@ -209,28 +314,15 @@ footer {
     display: flex;
     justify-content: center;
   }
+
+  .contact-list a {
+    padding: 15px;
+  }
 }
 
 @media screen and (max-width: 749px) {
-  h1 {
-    font-size: 8vw;
-  }
-
-  h2 {
-    font-size: 4vw;
-    margin-top: 10px;
-  }
-
-  p {
-    width: 80%;
-  }
-
   .my-name {
     font-size: 3vw;
     letter-spacing: 1vw;
-  }
-
-  .contact-list a {
-    padding: 5px;
   }
 }
