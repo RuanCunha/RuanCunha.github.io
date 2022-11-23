@@ -11,10 +11,10 @@
 ## Roadmap
 
 - [ ] Hero header
-- [ ] Nav bar
+- [X] Nav bar
 - [ ] Fully responsive
 - [ ] Email form
-- [ ] Contact icons
+- [X] Contact icons
 - [ ] Projects carrousel
 - [ ] Night mode
 - [ ] English page and toggle
