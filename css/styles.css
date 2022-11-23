@@ -120,10 +120,6 @@ nav {
   transition: transform 0.2s ease;
 }
 
-nav:target {
-  transform: translateX(0);
-}
-
 nav ul {
   list-style-type: none;
   padding: 0;
