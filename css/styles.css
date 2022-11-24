@@ -142,6 +142,11 @@ nav a {
   border-bottom: 1px solid var(--color-pinkish-red);
 }
 
+a {
+  color: var(--color-pinkish-red);
+  font-weight: bold;
+}
+
 /* nav a:focus {
   background-color: var(--color-pale-red);
   color: #FFFFFF;
@@ -163,6 +168,23 @@ nav a:hover {
 
 .close:hover {
   background-color: transparent;
+}
+
+.btn {
+  color: #f3f3f3;
+  background-color: var(--color-pinkish-red);
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-block;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  color: #FFFFFF;
 }
 
 /* Profile
@@ -195,26 +217,6 @@ p {
   background-color: var(--color-pale-red);
 }
 
-.projects a {
-  color: var(--color-pinkish-red);
-  font-weight: bold;
-}
-
-.projects .btn {
-  color: #f3f3f3;
-  background-color: var(--color-pinkish-red);
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.projects .btn:hover {
-  opacity: 0.7;
-  color: #FFFFFF;
-}
-
 .project-item {
   overflow: hidden;
 }
@@ -245,6 +247,64 @@ p {
 
 /* Contact
 *************************/
+
+.contact-form{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contact-form ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contact-form ul li {
+  padding: 0;
+  margin: 4px;
+  list-style-type: none;
+  margin-bottom: 10px;
+  flex: 40%;
+}
+
+input {
+  width: 100%;
+}
+
+input[name="subject"] {
+  width: 100%;
+}
+
+.contact-form ul li:nth-child(3), .contact-form ul li:nth-child(4) {
+  flex: 100%;
+}
+
+input[type='text'], input[type='email'] {
+  border: 0;
+  background-color: var(--baby-pink);
+  height: 50px;
+  font-size: 1rem;
+  color: var(--color-cinder);
+  padding: 0 20px;
+  border-radius: 0.25rem;
+}
+
+textarea {
+  width: 100%;
+  border: 0;
+  background-color: var(--baby-pink);
+  height: 50px;
+  font-size: 1rem;
+  color: var(--color-cinder);
+  padding: 20px;
+  min-height: 150px;
+  box-sizing: border-box;
+  flex-grow: 2;
+  border-radius: 0.25rem;
+}
 
 footer {
   background-color: var(--color-cinder-light);
@@ -326,13 +386,21 @@ footer {
     padding-bottom: 2rem;
   }
 
-  .contact-list {
+  .contact {
     display: flex;
-    justify-content: center;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    margin-left: 3rem;
   }
 
   .contact-list a {
     padding: 15px;
+  }
+
+  .contact-form{
+    width: 50%;
   }
 }
 
