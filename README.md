@@ -13,7 +13,7 @@
 - [ ] Hero header
 - [X] Nav bar
 - [ ] Fully responsive
-- [ ] Email form
+- [X] Email form
 - [X] Contact icons
 - [ ] Projects carrousel
 - [ ] Night mode
