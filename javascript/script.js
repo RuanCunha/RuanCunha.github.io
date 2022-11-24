@@ -27,5 +27,9 @@ function sendMail() {
         alert("Mensagem enviada!");
       }
     )
-    .catch(err => console.log(err));
+    .catch(
+      err => {
+        console.log(err);
+        alert("Houve um erro no envio. Tente novamente.");
+      });
 }
