@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="/javascript/script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("y_GfKUIxUBYpLpPU3");
+      })();
+    </script>
   </head>
   <body>
     <main>
@@ -146,44 +154,49 @@
           <!-- Social media and contact links. Add or remove any networks. -->
             <div class="contact-form">
               <h4>Me envie uma mensagem pelo formulário:</h4>
-              <form action="">
+              <form>
                 <ul>
                   <li>
                     <input
+                      id="name"
                       type="text"
                       name="name"
-                      placeholder="Name"
+                      placeholder="Seu nome"
                       required
                     >
                   </li>
                   <li>
                     <input
+                      id="email"
                       type="email"
                       name="enail"
-                      placeholder="Email"
+                      placeholder="Seu email"
                       required
                     >
                   </li>
                   <li>
                     <input
+                      id="subject"
                       type="text"
                       name="subject"
-                      placeholder="Subject"
+                      placeholder="Assunto"
                       required
                     >
                   </li>
                   <li>
                     <textarea
+                      id="message"
                       name="message"
-                      placeholder="Message"
+                      placeholder="Sua mensagem"
                       required
                     ></textarea>
                   </li>
                   <li>
                     <input 
-                      type="submit" 
-                      class="btn" 
+                      type='button'
+                      class="btn"
                       value="Enviar email"
+                      onclick="sendMail()"
                     >
                   </li>
                 </ul>
