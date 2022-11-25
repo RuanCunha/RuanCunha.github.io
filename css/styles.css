@@ -36,6 +36,7 @@ span {
 
 a:hover {
   text-decoration: none;
+  opacity: 0.7;
 }
 
 h1 {
@@ -100,6 +101,7 @@ header {
   left: 0;
   width: 100vw;
   padding: 0.3rem 1rem;
+  z-index: 1000;
 }
 
 nav {
@@ -164,6 +166,7 @@ nav a:hover {
 
 .close {
   padding-top: 0;
+  border: none;
 }
 
 .close:hover {
@@ -184,7 +187,6 @@ nav a:hover {
 
 .btn:hover {
   opacity: 0.7;
-  color: #FFFFFF;
 }
 
 /* Profile
