@@ -251,6 +251,11 @@ nav a:hover {
   transform: rotate(-20deg);
 }
 
+.about-picture:hover > img {
+  transform: 
+    rotate(-5deg);
+}
+
 .my-name {
   font-size: 1rem;
   letter-spacing: 0.4rem;
