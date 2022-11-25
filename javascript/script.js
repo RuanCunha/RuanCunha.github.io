@@ -1,8 +1,10 @@
 function openNav() {
+  if (window.matchMedia("(min-width: 750px)").matches) return
   document.getElementById("navbar").style.transform = "translateX(0)";
 }
 
 function closeNav() {
+  if (window.matchMedia("(min-width: 750px)").matches) return
   document.getElementById("navbar").style.transform = "translateX(-100%)";
 }
 
