@@ -65,7 +65,7 @@ h1, h2, h3 {
   max-width: 1200px;
   width: 85%;
   margin: 0 auto;
-  padding: 4.5rem 0;
+  padding: 4.5rem 0 2rem;
 }
 
 .item-details h4 + p {
@@ -190,6 +190,65 @@ nav a:hover {
 /* Profile
 *************************/
 
+.about-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.about-picture {
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.about-picture {
+  display: grid;
+  grid-template-areas: "about-picture";
+  width: 50%;
+}
+
+.about-picture > img, .about-picture > div {
+  grid-area: about-picture;
+}
+
+.about-picture > img, .about-picture > div {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+
+  transition: transform 200ms;
+}
+
+.about-picture > div:nth-child(1) {
+  background-color: var(--color-pale-red);
+}
+
+.about-picture > div:nth-child(2) {
+  background-color: var(--color-pinkish-red);
+}
+
+.about-picture > div:nth-child(1) {
+  transform: rotate(-20deg);
+}
+
+.about-picture > div:nth-child(2) {
+  transform: rotate(-10deg);
+}
+
+.about-picture > img {
+  transform: 
+    rotate(0deg);
+}
+
+.about-picture:hover > div:nth-child(1) {
+  transform:
+    rotate(-40deg);
+}
+
+.about-picture:hover > div:nth-child(2) {
+  transform: rotate(-20deg);
+}
+
 .my-name {
   font-size: 1rem;
   letter-spacing: 0.4rem;
@@ -306,7 +365,7 @@ textarea {
   border-radius: 0.25rem;
 }
 
-footer {
+#contact {
   background-color: var(--color-cinder-light);
 }
 
@@ -318,6 +377,18 @@ footer {
 .contact-list a {
   padding: 5px;
   display: inline-block;
+}
+
+footer {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+footer p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 /* Responsive
@@ -370,6 +441,16 @@ footer {
 
   .hamburger, .close {
     display: none;
+  }
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 50% 40%;
+    gap: 10%;
+  }
+
+  .about-picture {
+    margin: auto;
   }
 
   .project-item img {
