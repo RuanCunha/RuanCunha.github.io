@@ -10,9 +10,9 @@
 
 ## Roadmap
 
-- [ ] Hero header
+- [X] Hero header
 - [X] Nav bar
-- [ ] Fully responsive
+- [X] Fully responsive
 - [X] Email form
 - [X] Contact icons
 - [ ] Projects carrousel
